@@ -24,10 +24,10 @@ import {
   Colors,
   DebugInstructions,
   ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import HanziWriter from './src/HanziWriter';
+  UselessTextInput,
+} from './src/component';
+import HanziWriter from './src/HanziWriter/HanziWriter';
 import Canvas from 'react-native-canvas';
-import UselessTextInput from './UselessTextInput';
 
 class App extends React.Component {
 
@@ -108,11 +108,11 @@ class App extends React.Component {
                 style={styles.textInput}
                 textChangeCallback={(text)=>{this.handleCanvas(this._canvas, text)}}/>
               </View>
-
+              <View style={styles.separator} />
              
               <View style={styles.sectionContainer}>
 
-                <View style={styles.separator} />
+              
                 <TouchableOpacity
                   accessibilityRole={'button'}
                   onPress={this.playAnimation}
@@ -191,6 +191,11 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
+  separator: {
+    width:375,
+    height:5, 
+    backgroundColor:'#00888888'
+  }
 });
 
 export default App;
