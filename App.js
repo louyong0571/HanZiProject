@@ -53,7 +53,7 @@ class App extends React.Component {
         height: 150,
         padding: 1,
         renderer: 'canvas',
-        radicalColor: '#166E16',
+        radicalColor: '#f00',
         showOutline: false,
       });
     }
